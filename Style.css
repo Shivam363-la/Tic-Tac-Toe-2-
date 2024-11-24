@@ -1,0 +1,231 @@
+/* Basic CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f7f7f7;
+}
+
+/* Logo styles */
+.logo-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+/* Shivam Sharma text with red color and golden glow */
+.header {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #FF0000; /* Red color */
+    font-weight: 900; /* Stronger bold weight */
+    animation: redGoldenGlow 3s ease-in-out infinite alternate;
+}
+
+/* Golden glow effect for "Shivam Sharma" text */
+@keyframes redGoldenGlow {
+    0% {
+        text-shadow: 
+            0 0 5px #FFD700, 
+            0 0 10px #FFD700, 
+            0 0 15px #FFD700;
+    }
+    100% {
+        text-shadow: 
+            0 0 15px #FFD700, 
+            0 0 25px #FFD700, 
+            0 0 35px #FFD700;
+    }
+}
+
+/* Tic-Tac-Toe text with blue color and golden glow */
+h1 {
+    margin-bottom: 20px;
+    font-size: 2rem; /* Decreased size */
+    color: #0000FF; /* Blue color */
+    animation: blueGoldenGlow 3s ease-in-out infinite alternate;
+}
+
+/* Blue text with golden glow effect for "Tic-Tac-Toe" */
+@keyframes blueGoldenGlow {
+    0% {
+        text-shadow: 
+            0 0 5px #FFD700, 
+            0 0 10px #FFD700, 
+            0 0 15px #FFD700;
+    }
+    100% {
+        text-shadow: 
+            0 0 15px #FFD700, 
+            0 0 25px #FFD700, 
+            0 0 35px #FFD700;
+    }
+}
+
+.game-container {
+    text-align: center;
+    position: relative;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 5px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    font-size: 3rem;
+    font-weight: bold;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #333;
+    transition: background-color 0.3s;
+}
+
+.cell:focus {
+    outline: none;
+}
+
+.cell:hover {
+    background-color: #f0f0f0;
+}
+
+.game-info {
+    font-size: 1.2rem;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .game-board {
+        grid-template-columns: repeat(3, 80px);
+    }
+    
+    .cell {
+        width: 80px;
+        height: 80px;
+        font-size: 2rem;
+    }
+}
+/* Logo styles */
+.logo-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.logo {
+    width: 120px; /* Increased size */
+    height: 120px; /* Increased size */
+}
+
+/* Game status text */
+#status {
+    font-size: 2rem;
+    font-weight: bold;
+    color: red; /* Set the color to red for both players */
+}
+
+/* Game status text */
+#status {
+    font-size: 1.2rem;  /* Decrease the size */
+    font-weight: bold;
+    color: red; /* Set the color to red for both players */
+}
+
+
+
+/* Winner status text for Player X */
+#winner-status-x {
+    font-size: 1.2rem; /* Set the size */
+    font-weight: bold;
+    color: #FFD700; /* Golden color */
+    animation: goldenGlow 1s ease-in-out infinite alternate; /* Golden glow effect */
+}
+
+/* Golden glow effect for Player X's win status */
+@keyframes goldenGlow {
+    0% {
+        text-shadow: 
+            0 0 5px #FFD700, 
+            0 0 10px #FFD700, 
+            0 0 15px #FFD700;
+    }
+    100% {
+        text-shadow: 
+            0 0 20px #FFD700, 
+            0 0 30px #FFD700, 
+            0 0 40px #FFD700;
+    }
+}
+
+/* Normal text for Player O */
+#winner-status-o {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000; /* Default color for Player O */
+}
+
+/* Winner status text for Player X with light golden glow */
+#winner-status-x {
+    font-size: 1.5rem; /* Set the size */
+    font-weight: bold;
+    color: #FFD700; /* Golden color */
+    animation: lightGoldenGlow 1.5s ease-in-out infinite alternate; /* Light golden glow effect */
+}
+
+/* Light golden glow effect for Player X's win status */
+@keyframes lightGoldenGlow {
+    0% {
+        text-shadow: 
+            0 0 5px #FFD700, 
+            0 0 10px #FFD700;
+    }
+    100% {
+        text-shadow: 
+            0 0 10px #FFD700, 
+            0 0 15px #FFD700;
+    }
+}
+
+/* Normal text for Player O */
+#winner-status-o {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000; /* Default color for Player O */
+}
